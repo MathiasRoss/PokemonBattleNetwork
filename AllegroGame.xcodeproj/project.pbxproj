@@ -17,7 +17,7 @@
 		D98078DC1C4E4548007DB2B2 /* ballGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D98078DA1C4E4548007DB2B2 /* ballGenerator.cpp */; };
 		D98078DF1C4E4F51007DB2B2 /* animator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D98078DD1C4E4F51007DB2B2 /* animator.cpp */; };
 		D98078E11C4E5392007DB2B2 /* megamanss.png in Resources */ = {isa = PBXBuildFile; fileRef = D98078E01C4E5392007DB2B2 /* megamanss.png */; };
-		D98078E71C4E5DFD007DB2B2 /* megamanssinfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */; };
+		D98078E71C4E5DFD007DB2B2 /* megamanss.txt in Resources */ = {isa = PBXBuildFile; fileRef = D98078E61C4E5DFD007DB2B2 /* megamanss.txt */; };
 		D9997C921C479E8000C1AE49 /* tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9997C901C479E8000C1AE49 /* tile.cpp */; };
 		D9997C961C479FCA00C1AE49 /* gameobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9997C941C479FCA00C1AE49 /* gameobject.cpp */; };
 		D9ABC7971C43E82700808662 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9ABC7961C43E82700808662 /* main.cpp */; };
@@ -105,7 +105,7 @@
 		D98078DD1C4E4F51007DB2B2 /* animator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = animator.cpp; sourceTree = "<group>"; };
 		D98078DE1C4E4F51007DB2B2 /* animator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = animator.hpp; sourceTree = "<group>"; };
 		D98078E01C4E5392007DB2B2 /* megamanss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = megamanss.png; sourceTree = SOURCE_ROOT; };
-		D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = megamanssinfo.txt; sourceTree = "<group>"; };
+		D98078E61C4E5DFD007DB2B2 /* megamanss.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = megamanss.txt; sourceTree = "<group>"; };
 		D9997C901C479E8000C1AE49 /* tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tile.cpp; sourceTree = "<group>"; };
 		D9997C911C479E8000C1AE49 /* tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tile.hpp; sourceTree = "<group>"; };
 		D9997C931C479EBC00C1AE49 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				D90D8E991C507BF400BD5F13 /* treekoss.png */,
 				D98078E01C4E5392007DB2B2 /* megamanss.png */,
 				D90D8E971C507BA700BD5F13 /* treekossinfo.txt */,
-				D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */,
+				D98078E61C4E5DFD007DB2B2 /* megamanss.txt */,
 			);
 			name = SpriteSheets;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D98078E71C4E5DFD007DB2B2 /* megamanssinfo.txt in Resources */,
+				D98078E71C4E5DFD007DB2B2 /* megamanss.txt in Resources */,
 				D90D8E9A1C507BF400BD5F13 /* treekoss.png in Resources */,
 				D90D8E831C4E66E500BD5F13 /* format.txt in Resources */,
 				D90D8E981C507BA700BD5F13 /* treekossinfo.txt in Resources */,

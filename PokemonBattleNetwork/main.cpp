@@ -41,7 +41,7 @@ int main(int argc, char **argv){
     vector<tile*> tiles;
 
     ALLEGRO_BITMAP *image;
-    image = al_load_bitmap("mm.png");
+    image = al_load_bitmap("megamanss.png");
     
     if(!image) {
         al_show_native_message_box(display, "Error", "Error", "Failed to load image!",
@@ -65,7 +65,7 @@ int main(int argc, char **argv){
         tiles.push_back(a);
       //  collide.add(a);
     }
-    animator *anim = new animator("mm.png","mm.txt");
+    animator *anim = new animator("megamanss.png","megamanss.txt");
     //ballGenerator *bg = new ballGenerator(100,100,&collide,&balls);
     
  //    bouncer b(20,20,32,3,4);
