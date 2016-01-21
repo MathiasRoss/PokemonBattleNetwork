@@ -1,3 +1,12 @@
+/* megaman_hpp */
+//
+//  megaman.hpp
+//  AllegroGame
+//
+//  Created by Sasha Han on 1/20/16.
+//
+//
+
 #pragma once
 #include <iostream>
 #include "allegro5/allegro.h"
@@ -9,32 +18,16 @@
 #include "allegro5/allegro_acodec.h"
 #include "globals.h"
 #include "gameobject.hpp"
-class tile : public gameobject
+#include <typeinfo>
+#include "pokemon.hpp"
+class megaman : public pokemon
 {
 public:
-    tile(float iX, float iY, int iSize)
+    megaman(float iX, float iY, int iSize, float iDX, float iDY)
     {
-        resetCount = 0;
-        setID(1);
-        setX(iX);
-        setY(iY);
-        setSize(iSize);
-        
-        b = al_create_bitmap(size, size);
-        if(!b) {
-            fprintf(stderr, "failed to create tile bitmap!\n");
-        }
-        
-        al_set_target_bitmap(b);
-        
-        al_clear_to_color(al_map_rgb(10, 120, 255));
-        markForDeath = false;
+        cout << "MEGAMAN";
     };
-    tile()
-    {
-        tile(20,20,32);
-    };
-    ~tile()
+    ~megaman()
     {
         al_destroy_bitmap(b);
     };
@@ -46,7 +39,8 @@ public:
     
     
 private:
-  
+    int dx;
+    int dy;
     ALLEGRO_BITMAP *b;
     int resetCount;
 };

@@ -6,20 +6,348 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D90D8E831C4E66E500BD5F13 /* format.txt in Resources */ = {isa = PBXBuildFile; fileRef = D90D8E821C4E66E500BD5F13 /* format.txt */; };
+		D90D8E861C50605500BD5F13 /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E841C50605500BD5F13 /* Factory.cpp */; };
+		D90D8E8B1C50695B00BD5F13 /* pokemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E891C50695B00BD5F13 /* pokemon.cpp */; };
+		D90D8E8E1C50697300BD5F13 /* treeko.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E8C1C50697300BD5F13 /* treeko.cpp */; };
+		D90D8E911C50697D00BD5F13 /* megaman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E8F1C50697D00BD5F13 /* megaman.cpp */; };
+		D90D8E981C507BA700BD5F13 /* treekossinfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D90D8E971C507BA700BD5F13 /* treekossinfo.txt */; };
+		D90D8E9A1C507BF400BD5F13 /* treekoss.png in Resources */ = {isa = PBXBuildFile; fileRef = D90D8E991C507BF400BD5F13 /* treekoss.png */; };
+		D98078DC1C4E4548007DB2B2 /* ballGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D98078DA1C4E4548007DB2B2 /* ballGenerator.cpp */; };
+		D98078DF1C4E4F51007DB2B2 /* animator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D98078DD1C4E4F51007DB2B2 /* animator.cpp */; };
+		D98078E11C4E5392007DB2B2 /* megamanss.png in Resources */ = {isa = PBXBuildFile; fileRef = D98078E01C4E5392007DB2B2 /* megamanss.png */; };
+		D98078E71C4E5DFD007DB2B2 /* megamanssinfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */; };
+		D9997C921C479E8000C1AE49 /* tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9997C901C479E8000C1AE49 /* tile.cpp */; };
+		D9997C961C479FCA00C1AE49 /* gameobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9997C941C479FCA00C1AE49 /* gameobject.cpp */; };
+		D9ABC7971C43E82700808662 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9ABC7961C43E82700808662 /* main.cpp */; };
+		D9ABC7C01C43E9BD00808662 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9ABC7961C43E82700808662 /* main.cpp */; };
+		D9ABC7CD1C43EC6500808662 /* Allegro-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C21C43EC6400808662 /* Allegro-5.0.framework */; };
+		D9ABC7CE1C43EC6500808662 /* AllegroAcodec-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C31C43EC6400808662 /* AllegroAcodec-5.0.framework */; };
+		D9ABC7CF1C43EC6500808662 /* AllegroAudio-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C41C43EC6400808662 /* AllegroAudio-5.0.framework */; };
+		D9ABC7D01C43EC6500808662 /* AllegroColor-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C51C43EC6400808662 /* AllegroColor-5.0.framework */; };
+		D9ABC7D11C43EC6500808662 /* AllegroDialog-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C61C43EC6500808662 /* AllegroDialog-5.0.framework */; };
+		D9ABC7D21C43EC6500808662 /* AllegroFont-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C71C43EC6500808662 /* AllegroFont-5.0.framework */; };
+		D9ABC7D31C43EC6500808662 /* AllegroImage-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C81C43EC6500808662 /* AllegroImage-5.0.framework */; };
+		D9ABC7D41C43EC6500808662 /* AllegroMain-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7C91C43EC6500808662 /* AllegroMain-5.0.framework */; };
+		D9ABC7D51C43EC6500808662 /* AllegroMemfile-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7CA1C43EC6500808662 /* AllegroMemfile-5.0.framework */; };
+		D9ABC7D61C43EC6500808662 /* AllegroPrimitives-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7CB1C43EC6500808662 /* AllegroPrimitives-5.0.framework */; };
+		D9ABC7D71C43EC6500808662 /* AllegroTTF-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ABC7CC1C43EC6500808662 /* AllegroTTF-5.0.framework */; };
+		D9ABC7D81C43ECBF00808662 /* Allegro-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C21C43EC6400808662 /* Allegro-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7D91C43ECBF00808662 /* AllegroAcodec-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C31C43EC6400808662 /* AllegroAcodec-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DA1C43ECBF00808662 /* AllegroAudio-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C41C43EC6400808662 /* AllegroAudio-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DB1C43ECBF00808662 /* AllegroColor-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C51C43EC6400808662 /* AllegroColor-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DC1C43ECBF00808662 /* AllegroDialog-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C61C43EC6500808662 /* AllegroDialog-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DD1C43ECBF00808662 /* AllegroFont-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C71C43EC6500808662 /* AllegroFont-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DE1C43ECBF00808662 /* AllegroImage-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C81C43EC6500808662 /* AllegroImage-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7DF1C43ECBF00808662 /* AllegroMain-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7C91C43EC6500808662 /* AllegroMain-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7E01C43ECBF00808662 /* AllegroMemfile-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7CA1C43EC6500808662 /* AllegroMemfile-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7E11C43ECBF00808662 /* AllegroPrimitives-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7CB1C43EC6500808662 /* AllegroPrimitives-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7E21C43ECBF00808662 /* AllegroTTF-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9ABC7CC1C43EC6500808662 /* AllegroTTF-5.0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9ABC7E51C4538F400808662 /* bouncer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9ABC7E31C4538F400808662 /* bouncer.cpp */; };
+		D9ABC7E81C4543D200808662 /* collider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9ABC7E61C4543D200808662 /* collider.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9ABC7A61C43E82700808662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9ABC7851C43E70100808662 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9ABC78E1C43E82700808662;
+			remoteInfo = PokemonBattleNetwork;
+		};
+		D9ABC7B11C43E82700808662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9ABC7851C43E70100808662 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9ABC78E1C43E82700808662;
+			remoteInfo = PokemonBattleNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9ABC7C11C43EB4B00808662 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D9ABC7D81C43ECBF00808662 /* Allegro-5.0.framework in CopyFiles */,
+				D9ABC7D91C43ECBF00808662 /* AllegroAcodec-5.0.framework in CopyFiles */,
+				D9ABC7DA1C43ECBF00808662 /* AllegroAudio-5.0.framework in CopyFiles */,
+				D9ABC7DB1C43ECBF00808662 /* AllegroColor-5.0.framework in CopyFiles */,
+				D9ABC7DC1C43ECBF00808662 /* AllegroDialog-5.0.framework in CopyFiles */,
+				D9ABC7DD1C43ECBF00808662 /* AllegroFont-5.0.framework in CopyFiles */,
+				D9ABC7DE1C43ECBF00808662 /* AllegroImage-5.0.framework in CopyFiles */,
+				D9ABC7DF1C43ECBF00808662 /* AllegroMain-5.0.framework in CopyFiles */,
+				D9ABC7E01C43ECBF00808662 /* AllegroMemfile-5.0.framework in CopyFiles */,
+				D9ABC7E11C43ECBF00808662 /* AllegroPrimitives-5.0.framework in CopyFiles */,
+				D9ABC7E21C43ECBF00808662 /* AllegroTTF-5.0.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D90D8E821C4E66E500BD5F13 /* format.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = format.txt; sourceTree = "<group>"; };
+		D90D8E841C50605500BD5F13 /* Factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Factory.cpp; sourceTree = "<group>"; };
+		D90D8E851C50605500BD5F13 /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
+		D90D8E891C50695B00BD5F13 /* pokemon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pokemon.cpp; sourceTree = "<group>"; };
+		D90D8E8A1C50695B00BD5F13 /* pokemon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pokemon.hpp; sourceTree = "<group>"; };
+		D90D8E8C1C50697300BD5F13 /* treeko.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = treeko.cpp; sourceTree = "<group>"; };
+		D90D8E8D1C50697300BD5F13 /* treeko.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = treeko.hpp; sourceTree = "<group>"; };
+		D90D8E8F1C50697D00BD5F13 /* megaman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = megaman.cpp; sourceTree = "<group>"; };
+		D90D8E901C50697D00BD5F13 /* megaman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = megaman.hpp; sourceTree = "<group>"; };
+		D90D8E971C507BA700BD5F13 /* treekossinfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treekossinfo.txt; sourceTree = "<group>"; };
+		D90D8E991C507BF400BD5F13 /* treekoss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treekoss.png; sourceTree = SOURCE_ROOT; };
+		D98078DA1C4E4548007DB2B2 /* ballGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ballGenerator.cpp; sourceTree = "<group>"; };
+		D98078DB1C4E4548007DB2B2 /* ballGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ballGenerator.hpp; sourceTree = "<group>"; };
+		D98078DD1C4E4F51007DB2B2 /* animator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = animator.cpp; sourceTree = "<group>"; };
+		D98078DE1C4E4F51007DB2B2 /* animator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = animator.hpp; sourceTree = "<group>"; };
+		D98078E01C4E5392007DB2B2 /* megamanss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = megamanss.png; sourceTree = SOURCE_ROOT; };
+		D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = megamanssinfo.txt; sourceTree = "<group>"; };
+		D9997C901C479E8000C1AE49 /* tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tile.cpp; sourceTree = "<group>"; };
+		D9997C911C479E8000C1AE49 /* tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tile.hpp; sourceTree = "<group>"; };
+		D9997C931C479EBC00C1AE49 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		D9997C941C479FCA00C1AE49 /* gameobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameobject.cpp; sourceTree = "<group>"; };
+		D9997C951C479FCA00C1AE49 /* gameobject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gameobject.hpp; sourceTree = "<group>"; };
+		D9ABC78F1C43E82700808662 /* PokemonBattleNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonBattleNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9ABC7961C43E82700808662 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D9ABC7A51C43E82700808662 /* PokemonBattleNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonBattleNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9ABC7B01C43E82700808662 /* PokemonBattleNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonBattleNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9ABC7C21C43EC6400808662 /* Allegro-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Allegro-5.0.framework"; path = "../../../../Library/Frameworks/Allegro-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C31C43EC6400808662 /* AllegroAcodec-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroAcodec-5.0.framework"; path = "../../../../Library/Frameworks/AllegroAcodec-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C41C43EC6400808662 /* AllegroAudio-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroAudio-5.0.framework"; path = "../../../../Library/Frameworks/AllegroAudio-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C51C43EC6400808662 /* AllegroColor-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroColor-5.0.framework"; path = "../../../../Library/Frameworks/AllegroColor-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C61C43EC6500808662 /* AllegroDialog-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroDialog-5.0.framework"; path = "../../../../Library/Frameworks/AllegroDialog-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C71C43EC6500808662 /* AllegroFont-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroFont-5.0.framework"; path = "../../../../Library/Frameworks/AllegroFont-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C81C43EC6500808662 /* AllegroImage-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroImage-5.0.framework"; path = "../../../../Library/Frameworks/AllegroImage-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7C91C43EC6500808662 /* AllegroMain-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroMain-5.0.framework"; path = "../../../../Library/Frameworks/AllegroMain-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7CA1C43EC6500808662 /* AllegroMemfile-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroMemfile-5.0.framework"; path = "../../../../Library/Frameworks/AllegroMemfile-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7CB1C43EC6500808662 /* AllegroPrimitives-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroPrimitives-5.0.framework"; path = "../../../../Library/Frameworks/AllegroPrimitives-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7CC1C43EC6500808662 /* AllegroTTF-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroTTF-5.0.framework"; path = "../../../../Library/Frameworks/AllegroTTF-5.0.framework"; sourceTree = "<group>"; };
+		D9ABC7E31C4538F400808662 /* bouncer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bouncer.cpp; sourceTree = "<group>"; };
+		D9ABC7E41C4538F400808662 /* bouncer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bouncer.hpp; sourceTree = "<group>"; };
+		D9ABC7E61C4543D200808662 /* collider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collider.cpp; sourceTree = "<group>"; };
+		D9ABC7E71C4543D200808662 /* collider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = collider.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9ABC78C1C43E82700808662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9ABC7CD1C43EC6500808662 /* Allegro-5.0.framework in Frameworks */,
+				D9ABC7CE1C43EC6500808662 /* AllegroAcodec-5.0.framework in Frameworks */,
+				D9ABC7CF1C43EC6500808662 /* AllegroAudio-5.0.framework in Frameworks */,
+				D9ABC7D01C43EC6500808662 /* AllegroColor-5.0.framework in Frameworks */,
+				D9ABC7D11C43EC6500808662 /* AllegroDialog-5.0.framework in Frameworks */,
+				D9ABC7D21C43EC6500808662 /* AllegroFont-5.0.framework in Frameworks */,
+				D9ABC7D31C43EC6500808662 /* AllegroImage-5.0.framework in Frameworks */,
+				D9ABC7D41C43EC6500808662 /* AllegroMain-5.0.framework in Frameworks */,
+				D9ABC7D51C43EC6500808662 /* AllegroMemfile-5.0.framework in Frameworks */,
+				D9ABC7D61C43EC6500808662 /* AllegroPrimitives-5.0.framework in Frameworks */,
+				D9ABC7D71C43EC6500808662 /* AllegroTTF-5.0.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7A21C43E82700808662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7AD1C43E82700808662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		D90D8E921C50699100BD5F13 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				D90D8E891C50695B00BD5F13 /* pokemon.cpp */,
+				D90D8E8A1C50695B00BD5F13 /* pokemon.hpp */,
+				D90D8E8C1C50697300BD5F13 /* treeko.cpp */,
+				D90D8E8D1C50697300BD5F13 /* treeko.hpp */,
+				D90D8E8F1C50697D00BD5F13 /* megaman.cpp */,
+				D90D8E901C50697D00BD5F13 /* megaman.hpp */,
+			);
+			name = Pokemon;
+			sourceTree = "<group>";
+		};
+		D90D8E931C5069BC00BD5F13 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D98078DA1C4E4548007DB2B2 /* ballGenerator.cpp */,
+				D98078DB1C4E4548007DB2B2 /* ballGenerator.hpp */,
+				D90D8E841C50605500BD5F13 /* Factory.cpp */,
+				D90D8E851C50605500BD5F13 /* Factory.hpp */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		D90D8E941C506A2600BD5F13 /* GameObject */ = {
+			isa = PBXGroup;
+			children = (
+				D9997C941C479FCA00C1AE49 /* gameobject.cpp */,
+				D9997C951C479FCA00C1AE49 /* gameobject.hpp */,
+				D9997C901C479E8000C1AE49 /* tile.cpp */,
+				D9997C911C479E8000C1AE49 /* tile.hpp */,
+				D9ABC7E31C4538F400808662 /* bouncer.cpp */,
+				D9ABC7E41C4538F400808662 /* bouncer.hpp */,
+			);
+			name = GameObject;
+			sourceTree = "<group>";
+		};
+		D90D8E951C507B8100BD5F13 /* SpriteSheets */ = {
+			isa = PBXGroup;
+			children = (
+				D90D8E821C4E66E500BD5F13 /* format.txt */,
+				D90D8E991C507BF400BD5F13 /* treekoss.png */,
+				D98078E01C4E5392007DB2B2 /* megamanss.png */,
+				D90D8E971C507BA700BD5F13 /* treekossinfo.txt */,
+				D98078E61C4E5DFD007DB2B2 /* megamanssinfo.txt */,
+			);
+			name = SpriteSheets;
+			sourceTree = "<group>";
+		};
 		D9ABC7841C43E70100808662 = {
 			isa = PBXGroup;
 			children = (
+				D9ABC7C21C43EC6400808662 /* Allegro-5.0.framework */,
+				D9ABC7C31C43EC6400808662 /* AllegroAcodec-5.0.framework */,
+				D9ABC7C41C43EC6400808662 /* AllegroAudio-5.0.framework */,
+				D9ABC7C51C43EC6400808662 /* AllegroColor-5.0.framework */,
+				D9ABC7C61C43EC6500808662 /* AllegroDialog-5.0.framework */,
+				D9ABC7C71C43EC6500808662 /* AllegroFont-5.0.framework */,
+				D9ABC7C81C43EC6500808662 /* AllegroImage-5.0.framework */,
+				D9ABC7C91C43EC6500808662 /* AllegroMain-5.0.framework */,
+				D9ABC7CA1C43EC6500808662 /* AllegroMemfile-5.0.framework */,
+				D9ABC7CB1C43EC6500808662 /* AllegroPrimitives-5.0.framework */,
+				D9ABC7CC1C43EC6500808662 /* AllegroTTF-5.0.framework */,
+				D9ABC7911C43E82700808662 /* PokemonBattleNetwork */,
+				D9ABC7901C43E82700808662 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		D9ABC7901C43E82700808662 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9ABC78F1C43E82700808662 /* PokemonBattleNetwork.app */,
+				D9ABC7A51C43E82700808662 /* PokemonBattleNetworkTests.xctest */,
+				D9ABC7B01C43E82700808662 /* PokemonBattleNetworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9ABC7911C43E82700808662 /* PokemonBattleNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				D90D8E951C507B8100BD5F13 /* SpriteSheets */,
+				D9ABC7951C43E82700808662 /* Supporting Files */,
+			);
+			path = PokemonBattleNetwork;
+			sourceTree = "<group>";
+		};
+		D9ABC7951C43E82700808662 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9ABC7961C43E82700808662 /* main.cpp */,
+				D98078DD1C4E4F51007DB2B2 /* animator.cpp */,
+				D98078DE1C4E4F51007DB2B2 /* animator.hpp */,
+				D9ABC7E61C4543D200808662 /* collider.cpp */,
+				D9ABC7E71C4543D200808662 /* collider.hpp */,
+				D9997C931C479EBC00C1AE49 /* globals.h */,
+				D90D8E941C506A2600BD5F13 /* GameObject */,
+				D90D8E931C5069BC00BD5F13 /* Factory */,
+				D90D8E921C50699100BD5F13 /* Pokemon */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9ABC78E1C43E82700808662 /* PokemonBattleNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9ABC7B71C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetwork" */;
+			buildPhases = (
+				D9ABC78B1C43E82700808662 /* Sources */,
+				D9ABC78C1C43E82700808662 /* Frameworks */,
+				D9ABC78D1C43E82700808662 /* Resources */,
+				D9ABC7C11C43EB4B00808662 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokemonBattleNetwork;
+			productName = PokemonBattleNetwork;
+			productReference = D9ABC78F1C43E82700808662 /* PokemonBattleNetwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9ABC7A41C43E82700808662 /* PokemonBattleNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9ABC7BA1C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetworkTests" */;
+			buildPhases = (
+				D9ABC7A11C43E82700808662 /* Sources */,
+				D9ABC7A21C43E82700808662 /* Frameworks */,
+				D9ABC7A31C43E82700808662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9ABC7A71C43E82700808662 /* PBXTargetDependency */,
+			);
+			name = PokemonBattleNetworkTests;
+			productName = PokemonBattleNetworkTests;
+			productReference = D9ABC7A51C43E82700808662 /* PokemonBattleNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9ABC7AF1C43E82700808662 /* PokemonBattleNetworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9ABC7BD1C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetworkUITests" */;
+			buildPhases = (
+				D9ABC7AC1C43E82700808662 /* Sources */,
+				D9ABC7AD1C43E82700808662 /* Frameworks */,
+				D9ABC7AE1C43E82700808662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9ABC7B21C43E82700808662 /* PBXTargetDependency */,
+			);
+			name = PokemonBattleNetworkUITests;
+			productName = PokemonBattleNetworkUITests;
+			productReference = D9ABC7B01C43E82700808662 /* PokemonBattleNetworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D9ABC7851C43E70100808662 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					D9ABC78E1C43E82700808662 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D9ABC7A41C43E82700808662 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D9ABC78E1C43E82700808662;
+					};
+					D9ABC7AF1C43E82700808662 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D9ABC78E1C43E82700808662;
+					};
+				};
 			};
 			buildConfigurationList = D9ABC7881C43E70100808662 /* Build configuration list for PBXProject "AllegroGame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -27,14 +355,97 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D9ABC7841C43E70100808662;
+			productRefGroup = D9ABC7901C43E82700808662 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D9ABC78E1C43E82700808662 /* PokemonBattleNetwork */,
+				D9ABC7A41C43E82700808662 /* PokemonBattleNetworkTests */,
+				D9ABC7AF1C43E82700808662 /* PokemonBattleNetworkUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9ABC78D1C43E82700808662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D98078E71C4E5DFD007DB2B2 /* megamanssinfo.txt in Resources */,
+				D90D8E9A1C507BF400BD5F13 /* treekoss.png in Resources */,
+				D90D8E831C4E66E500BD5F13 /* format.txt in Resources */,
+				D90D8E981C507BA700BD5F13 /* treekossinfo.txt in Resources */,
+				D98078E11C4E5392007DB2B2 /* megamanss.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7A31C43E82700808662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7AE1C43E82700808662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9ABC78B1C43E82700808662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90D8E911C50697D00BD5F13 /* megaman.cpp in Sources */,
+				D98078DC1C4E4548007DB2B2 /* ballGenerator.cpp in Sources */,
+				D90D8E8E1C50697300BD5F13 /* treeko.cpp in Sources */,
+				D98078DF1C4E4F51007DB2B2 /* animator.cpp in Sources */,
+				D9ABC7E51C4538F400808662 /* bouncer.cpp in Sources */,
+				D9ABC7971C43E82700808662 /* main.cpp in Sources */,
+				D90D8E861C50605500BD5F13 /* Factory.cpp in Sources */,
+				D9997C961C479FCA00C1AE49 /* gameobject.cpp in Sources */,
+				D9ABC7E81C4543D200808662 /* collider.cpp in Sources */,
+				D90D8E8B1C50695B00BD5F13 /* pokemon.cpp in Sources */,
+				D9997C921C479E8000C1AE49 /* tile.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7A11C43E82700808662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ABC7AC1C43E82700808662 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9ABC7C01C43E9BD00808662 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9ABC7A71C43E82700808662 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9ABC78E1C43E82700808662 /* PokemonBattleNetwork */;
+			targetProxy = D9ABC7A61C43E82700808662 /* PBXContainerItemProxy */;
+		};
+		D9ABC7B21C43E82700808662 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9ABC78E1C43E82700808662 /* PokemonBattleNetwork */;
+			targetProxy = D9ABC7B11C43E82700808662 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D9ABC7891C43E70100808662 /* Debug */ = {
@@ -49,6 +460,299 @@
 			};
 			name = Release;
 		};
+		D9ABC7B81C43E82700808662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers";
+			};
+			name = Debug;
+		};
+		D9ABC7B91C43E82700808662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers";
+			};
+			name = Release;
+		};
+		D9ABC7BB1C43E82700808662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PokemonBattleNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonBattleNetwork.app/Contents/MacOS/PokemonBattleNetwork";
+			};
+			name = Debug;
+		};
+		D9ABC7BC1C43E82700808662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PokemonBattleNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonBattleNetwork.app/Contents/MacOS/PokemonBattleNetwork";
+			};
+			name = Release;
+		};
+		D9ABC7BE1C43E82700808662 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Framework;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PokemonBattleNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = PokemonBattleNetwork;
+				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D9ABC7BF1C43E82700808662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Framework;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PokemonBattleNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadbot.PokemonBattleNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = PokemonBattleNetwork;
+				USER_HEADER_SEARCH_PATHS = "/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers /Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -57,6 +761,33 @@
 			buildConfigurations = (
 				D9ABC7891C43E70100808662 /* Debug */,
 				D9ABC78A1C43E70100808662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9ABC7B71C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9ABC7B81C43E82700808662 /* Debug */,
+				D9ABC7B91C43E82700808662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9ABC7BA1C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9ABC7BB1C43E82700808662 /* Debug */,
+				D9ABC7BC1C43E82700808662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9ABC7BD1C43E82700808662 /* Build configuration list for PBXNativeTarget "PokemonBattleNetworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9ABC7BE1C43E82700808662 /* Debug */,
+				D9ABC7BF1C43E82700808662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

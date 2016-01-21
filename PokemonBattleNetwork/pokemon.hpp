@@ -1,3 +1,17 @@
+//
+//  pokemon.hpp
+//  AllegroGame
+//
+//  Created by Sasha Han on 1/20/16.
+//
+//
+
+#ifndef pokemon_hpp
+#define pokemon_hpp
+
+#include <stdio.h>
+
+#endif /* pokemon_hpp */
 #pragma once
 #include <iostream>
 #include "allegro5/allegro.h"
@@ -9,32 +23,21 @@
 #include "allegro5/allegro_acodec.h"
 #include "globals.h"
 #include "gameobject.hpp"
-class tile : public gameobject
+#include <typeinfo>
+using namespace std;
+class pokemon : public gameobject
 {
 public:
-    tile(float iX, float iY, int iSize)
+    pokemon(float iX, float iY, int iSize, float iDX, float iDY)
     {
-        resetCount = 0;
-        setID(1);
-        setX(iX);
-        setY(iY);
-        setSize(iSize);
-        
-        b = al_create_bitmap(size, size);
-        if(!b) {
-            fprintf(stderr, "failed to create tile bitmap!\n");
-        }
-        
-        al_set_target_bitmap(b);
-        
-        al_clear_to_color(al_map_rgb(10, 120, 255));
-        markForDeath = false;
+     
+        cout << "ERROR1";
     };
-    tile()
+    pokemon()
     {
-        tile(20,20,32);
+        cout << "ERROR2";
     };
-    ~tile()
+    ~pokemon()
     {
         al_destroy_bitmap(b);
     };
@@ -46,7 +49,8 @@ public:
     
     
 private:
-  
+    int dx;
+    int dy;
     ALLEGRO_BITMAP *b;
     int resetCount;
 };
