@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D90D8E831C4E66E500BD5F13 /* format.txt in Resources */ = {isa = PBXBuildFile; fileRef = D90D8E821C4E66E500BD5F13 /* format.txt */; };
-		D90D8E861C50605500BD5F13 /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E841C50605500BD5F13 /* Factory.cpp */; };
 		D90D8E8B1C50695B00BD5F13 /* pokemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E891C50695B00BD5F13 /* pokemon.cpp */; };
 		D90D8E8E1C50697300BD5F13 /* treeko.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E8C1C50697300BD5F13 /* treeko.cpp */; };
 		D90D8E911C50697D00BD5F13 /* megaman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90D8E8F1C50697D00BD5F13 /* megaman.cpp */; };
@@ -99,7 +98,6 @@
 
 /* Begin PBXFileReference section */
 		D90D8E821C4E66E500BD5F13 /* format.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = format.txt; sourceTree = "<group>"; };
-		D90D8E841C50605500BD5F13 /* Factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Factory.cpp; sourceTree = "<group>"; };
 		D90D8E851C50605500BD5F13 /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
 		D90D8E891C50695B00BD5F13 /* pokemon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pokemon.cpp; sourceTree = "<group>"; };
 		D90D8E8A1C50695B00BD5F13 /* pokemon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pokemon.hpp; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			children = (
 				D98078DA1C4E4548007DB2B2 /* ballGenerator.cpp */,
 				D98078DB1C4E4548007DB2B2 /* ballGenerator.hpp */,
-				D90D8E841C50605500BD5F13 /* Factory.cpp */,
 				D90D8E851C50605500BD5F13 /* Factory.hpp */,
 			);
 			name = Factory;
@@ -456,7 +453,6 @@
 				D98078DF1C4E4F51007DB2B2 /* animator.cpp in Sources */,
 				D9ABC7E51C4538F400808662 /* bouncer.cpp in Sources */,
 				D9ABC7971C43E82700808662 /* main.cpp in Sources */,
-				D90D8E861C50605500BD5F13 /* Factory.cpp in Sources */,
 				D9997C961C479FCA00C1AE49 /* gameobject.cpp in Sources */,
 				D93A5D311C5228AD00331464 /* move.cpp in Sources */,
 				D9ABC7E81C4543D200808662 /* collider.cpp in Sources */,

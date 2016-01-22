@@ -23,17 +23,17 @@
 class megaman : public pokemon
 {
 public:
-    megaman(string n, float iY, int iSize, float iDX, float iDY)
+    megaman(std::string n, float iY, int iSize, float iDX, float iDY)
     {
         name = n;
-        cout << "MEGAMAN";
+    //    std::cout << "MEGAMAN";
     };
     ~megaman()
     {
         al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void init();
     void draw();

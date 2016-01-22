@@ -8,14 +8,35 @@
 
 #include "swag.hpp"
 
-using namespace std;
-void swag::collide(gameobject go)
+
+void swag::collide(gameobject *go)
 {
+    if (go == opponent)
+    {
+        opponent->hp-=10;
+        markForDeath = true;
+        opponent->anim.stop();
+    }
 }
 
 void swag::update()
 {
     anim.update();
+    if(anim.animationFrame == anim.numFrames[0])
+    {
+        anim.stop(0,anim.numFrames[0]);
+        moving = 1;
+    }
+    if (moving == 1)
+    {
+        setX(getX()+(1*((orientation*2)-1)));
+        if(getX() > SCREEN_W || getX() < 0)
+        {
+            std::cout<< "swag is going away now";
+            markForDeath = true;
+        }
+    }
+    
 }
 void swag::draw()
 {
@@ -24,38 +45,39 @@ void swag::draw()
 
 void swag::parse(char * filename)
 {
+    /*
     int doesEvolve,numswags;
-    cout << "hi";
-    ifstream myfile;
+  std::cout << "hi";
+    std::ifstream myfile;
     
     myfile.open(filename);
-    string file_line;
+    std::string file_line;
     getline(myfile,file_line);
-    stringstream fl(file_line);
+    std::stringstream fl(file_line);
     fl >> name;
     fl >> id;
     fl >> numswags;
     fl >> doesEvolve;
-    cout << "\n";
-    cout << name << numswags << doesEvolve;
+  std::cout << "\n";
+  std::cout << name << numswags << doesEvolve;
     for (int i = 0; i < numswags; i++)
     {
         
         getline(myfile, file_line);
-        istringstream is( file_line );
+        std::istringstream is( file_line );
         
-        string j;
+        std::string j;
         is >> j;
         swags.push_back(j);
         int k;
         is >> k;
         swaglevel.push_back(k);
-        cout << "\n" << j;
+      std::cout << "\n" << j;
     }
     if (doesEvolve)
     {
         getline(myfile, file_line);
-        istringstream is( file_line );
+        std::istringstream is( file_line );
         is >> evolveto;
         is >> evolveat;
     }
@@ -66,4 +88,5 @@ void swag::parse(char * filename)
     }
     //current line of text is in file_line, not including the \n
     myfile.close();
+     */
 }

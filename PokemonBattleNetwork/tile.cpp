@@ -7,8 +7,8 @@
 //
 
 #include "tile.hpp"
-using namespace std;
-void tile::collide(gameobject go)
+
+void tile::collide(gameobject *go)
 {
    // cout << "TILE";
     resetCount = 20;

@@ -7,34 +7,46 @@
 //
 
 #include "animator.hpp"
-using namespace std;
 
+void animator::init(char * bmpName, char * ssName)
+{
+    b = al_load_bitmap(bmpName);
+    animationFrame = 0;
+    nextAnimation = 0;
+    currentAnimation = 0;
+    resetCount = 0;
+    parse(ssName);
+    start();
+}
 void animator::update()
 {
-  
-    if (resetCount == 0)
+    if (isPlaying)
     {
-        resetCount = speed[currentAnimation];
-        if (animationFrame == numFrames[currentAnimation])
+        if (resetCount == 0)
         {
-            if (nextAnimation != 0)
+            resetCount = speed[currentAnimation];
+            if (animationFrame == numFrames[currentAnimation])
             {
-                currentAnimation = nextAnimation;
+                if (nextAnimation != 0)
+                {
+                    currentAnimation = nextAnimation;
+                    animationFrame = 0;
+                    nextAnimation = 0;
+                }
                 animationFrame = 0;
-                nextAnimation = 0;
+                currentAnimation = 0;
             }
-            animationFrame = 0;
-            currentAnimation = 0;
+            else
+            {
+                
+                animationFrame++;
+            }
         }
         else
         {
-            
-            animationFrame++;
+            resetCount--;
         }
-    }
-    else
-    {
-        resetCount--;
+        
     }
 }
 void animator::switchAnimations(int animationNumber)
@@ -56,19 +68,33 @@ void animator::draw(int lx, int ly)
     al_draw_bitmap_region(b, x[currentAnimation]+(width+10)*animationFrame, y[currentAnimation], width, height, lx, ly, 0);
 //    al_draw_bitmap(b, x, y, 0);
 }
+void animator::stop(int aniNum, int aniFrame)
+{
+    isPlaying = 0;
+    currentAnimation = aniNum;
+    animationFrame = aniFrame;
+}
+void animator::stop()
+{
+    stop(0,0);
+}
+void animator::start()
+{
+    isPlaying = 1;
+}
 void animator::parse(char * ssName)
 {
-    cout << "hi";
-    ifstream myfile;
+    //std::cout << "hi";
+    std::ifstream myfile;
     
     myfile.open(ssName);
-    string file_line;
+    std::string file_line;
     getline(myfile,file_line);
-    stringstream fl(file_line);
+    std::stringstream fl(file_line);
     fl >> numAnimations;
     fl >> width;
     fl >> height;
-    cout << width << height << numAnimations;
+  //std::cout << width << height << numAnimations;
     while(std::getline(myfile, file_line))
     {
        

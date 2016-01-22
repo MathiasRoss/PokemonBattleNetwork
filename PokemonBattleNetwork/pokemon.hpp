@@ -25,47 +25,52 @@
 #include "gameobject.hpp"
 #include <typeinfo>
 #include "animator.hpp"
-using namespace std;
+
 class pokemon : public gameobject
 {
 public:
-    pokemon(string n, float iY, int iSize, float iDX, float iDY)
+    pokemon(std::string n, float iY, int iSize, float iDX, float iDY)
     {
         name = n;
-        cout << n;
+    //  std::cout << n;
         n+=".txt";
         char * tem = (char *)n.c_str();
         parse(tem);
-        string temSS = name+"ss";
+        std::string temSS = name+"ss";
         char * ssImg = (char *)(temSS + ".png").c_str();
         char * ssDesc = (char *)(temSS + ".txt").c_str();
         anim = *new animator(ssImg,ssDesc);
+        hp = 100;
     };
     pokemon()
     {
-        cout << "ERROR2";
+    //  std::cout << "ERROR2";
     };
     ~pokemon()
     {
         al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void init();
     void draw();
     
     void parse(char * filename);
-protected:
-    animator anim;
-    string name;
-    int id;
-    vector<string> moves;
-    vector<int> movelevel;
-    int evolveat;
-    string evolveto;
+    
+    
     int hp,speed;
     int debuffs;
+    animator anim;
+protected:
+    
+    std::string name;
+    int id;
+    std::vector<std::string> moves;
+    std::vector<int> movelevel;
+    int evolveat;
+    std::string evolveto;
+
 private:
 
     int dx;

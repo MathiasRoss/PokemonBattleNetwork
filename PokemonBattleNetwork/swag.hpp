@@ -26,16 +26,21 @@
 #include <typeinfo>
 #include "animator.hpp"
 #include "pokemon.hpp"
-using namespace std;
-class swag : public gameobject
+#include "move.hpp"
+
+class swag : public move
 {
 public:
-    swag(string n, pokemon * own, pokemon *op, int orient)
+    swag(std::string n, pokemon * own, pokemon *op, int orient,float newX, float newY)
     {
-        init(n,own,op,orient);
+        
+        start(n,own,op,orient,newX,newY);
+        damage = 10;
+        moving = 0;
     };
     swag()
     {
+
         isDead = false;
     };
     ~swag()
@@ -43,25 +48,15 @@ public:
         al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void draw();
     
     void parse(char * filename);
 protected:
-    bool isDead;
-    int orientation;
-    pokemon *owner;
-    pokemon *opponent;
-    animator anim;
-    string name;
-    int id;
-    vector<string> swags;
-    vector<int> swaglevel;
-    int evolveat;
-    string evolveto;
-    int hp,speed;
-    int debuffs;
+    bool moving;
+   
+   
 private:
     
     int dx;

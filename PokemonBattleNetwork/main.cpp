@@ -9,7 +9,7 @@
 #include "animator.hpp"
 #include "allegro5/allegro_native_dialog.h"
 #include "Factory.hpp"
-using namespace std;
+
 enum MYKEYS {
     KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT
 };
@@ -20,6 +20,7 @@ int main(int argc, char **argv){
     bool redraw = true;
     bool doexit = false;
     bool key[4] = { false, false, false, false };
+    
     if(!al_init()) {
         fprintf(stderr, "failed to initialize allegro!\n");
         return -1;
@@ -35,8 +36,8 @@ int main(int argc, char **argv){
     }
     
     collider collide;
-    vector<bouncer *> balls;
-    vector<tile*> tiles;
+    std::vector<bouncer *> balls;
+    std::vector<tile*> tiles;
 
     ALLEGRO_BITMAP *image;
     image = al_load_bitmap("megamanss.png");
@@ -53,22 +54,26 @@ int main(int argc, char **argv){
         a = new bouncer(30*i,30*i,10,i/5.0,i);
 
         balls.push_back(a);
-        collide.add(a);
+      //  collide.add(a);
     }
     for (int i = 0; i < NUM_TILES; i++)
     {
         tile * a;
-   //     cout << i%16 << "\t" << i/12 << "\n";
+   //     std::cout << i%16 << "\t" << i/12 << "\n";
         a = new tile(TILE_SIZE * (i%16),TILE_SIZE * (i/16),TILE_SIZE);
         tiles.push_back(a);
       //  collide.add(a);
     }
     animator *anim = new animator("megamanss.png","megamanss.txt");
     //ballGenerator *bg = new ballGenerator(100,100,&collide,&balls);
-    PokemonFactory pf;
+    //PokemonFactory pf;
+
     pokemon * p = new pokemon("treeko",1,2,3,4);
-    
- //    bouncer b(20,20,32,3,4);
+    MoveFactory *mf;
+    move *m = mf->Create(SWAG, "swag", p, p, 0, 400, 200);
+    collide.add(p);
+    collide.add(m);
+    //    bouncer b(20,20,32,3,4);
  //   bouncer c(30,30,32,4,4);
     timer = al_create_timer(1.0 / FPS);
     if(!timer) {
@@ -107,13 +112,26 @@ int main(int argc, char **argv){
     
     al_start_timer(timer);
     
+    
+    
+    std::cout << "\nDONE WITH INIT\n";
     while(!doexit)
     {
         ALLEGRO_EVENT ev;
         al_wait_for_event(event_queue, &ev);
         
         if(ev.type == ALLEGRO_EVENT_TIMER) {
+            collide.update();
             anim->update();
+            
+            if (m != NULL && m->markForDeath == true)
+            {
+                delete m;
+                m = NULL;
+            }
+            else if (m!= NULL)
+                
+                m->update();
             for (int i = 0; i < balls.size(); i++)
             {
                 if (balls[i]->markForDeath == true)
@@ -147,7 +165,7 @@ int main(int argc, char **argv){
             
            // for (int i = 0; i < tiles.size(); i++)
              //   tiles[i]->update();
-            collide.update();
+            
             p->update();
             //bg->update();
             redraw = true;
@@ -205,6 +223,8 @@ int main(int argc, char **argv){
             al_set_target_bitmap(al_get_backbuffer(display));
             al_clear_to_color(al_map_rgb(0,0,0));
            // al_draw_bitmap(image,200,200,0);
+            if (m)
+                m->draw();
             
             /*
             for (int i = 0; i < tiles.size(); i++)

@@ -37,7 +37,7 @@ public:
 
     ~gameobject(){};
     
-    virtual void collide(gameobject go);
+    virtual void collide(gameobject *go);
     virtual void update();
     virtual void init();
     virtual void draw();

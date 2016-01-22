@@ -8,8 +8,8 @@
 
 #include "megaman.hpp"
 
-using namespace std;
-void megaman::collide(gameobject go)
+
+void megaman::collide(gameobject *go)
 {
     
   

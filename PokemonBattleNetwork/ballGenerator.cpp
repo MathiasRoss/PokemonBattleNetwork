@@ -7,7 +7,7 @@
 //
 
 #include "ballGenerator.hpp"
-using namespace std;
+
 
 void ballGenerator::update()
 {

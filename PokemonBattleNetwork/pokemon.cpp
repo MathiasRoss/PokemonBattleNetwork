@@ -8,13 +8,16 @@
 
 #include "pokemon.hpp"
 
-using namespace std;
-void pokemon::collide(gameobject go)
+
+void pokemon::collide(gameobject *go)
 {
+    std::cout << "\n" << hp;
 }
 
 void pokemon::update()
 {
+    if( hp <=0)
+        markForDeath = true;
     anim.update();
 }
 void pokemon::draw()
@@ -28,37 +31,37 @@ void pokemon::init()
 void pokemon::parse(char * filename)
 {
     int doesEvolve,numMoves;
-    cout << "hi";
-    ifstream myfile;
+ // std::cout << "hi";
+    std::ifstream myfile;
     
     myfile.open(filename);
-    string file_line;
+    std::string file_line;
     getline(myfile,file_line);
-    stringstream fl(file_line);
+    std::stringstream fl(file_line);
     fl >> name;
     fl >> id;
     fl >> numMoves;
     fl >> doesEvolve;
-    cout << "\n";
-    cout << name << numMoves << doesEvolve;
+//  std::cout << "\n";
+//  std::cout << name << numMoves << doesEvolve;
     for (int i = 0; i < numMoves; i++)
     {
     
         getline(myfile, file_line);
-        istringstream is( file_line );
+        std::istringstream is( file_line );
         
-        string j;
+        std::string j;
         is >> j;
         moves.push_back(j);
         int k;
         is >> k;
         movelevel.push_back(k);
-        cout << "\n" << j;
+  //    std::cout << "\n" << j;
     }
     if (doesEvolve)
     {
         getline(myfile, file_line);
-        istringstream is( file_line );
+        std::istringstream is( file_line );
         is >> evolveto;
         is >> evolveat;
     }

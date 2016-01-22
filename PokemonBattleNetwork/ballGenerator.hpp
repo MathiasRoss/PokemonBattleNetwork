@@ -12,11 +12,11 @@
 #include "bouncer.hpp"
 #include "collider.hpp"
 #include <vector>
-using namespace std;
+
 class ballGenerator
 {
 public:
-    ballGenerator(float iX, float iY,collider* c, vector<bouncer *>* v)
+    ballGenerator(float iX, float iY,collider* c, std::vector<bouncer *>* v)
     {
         
         resetCount = 0;
@@ -32,7 +32,7 @@ public:
   
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void init();
     void draw();
@@ -41,7 +41,7 @@ public:
 private:
     float x;
     float y;
-    vector<bouncer *>* bouncerVector;
+    std::vector<bouncer *>* bouncerVector;
     collider* colliderPointer;
     int resetCount;
 };

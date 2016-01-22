@@ -7,7 +7,7 @@
 //
 
 #include "collider.hpp"
-using namespace std;
+
 void collider::update()
 {
 
@@ -20,8 +20,8 @@ void collider::update()
                 if (i != j && checkCollision(balls[i], balls[j]))
                 {
           
-                    balls[i]->collide(*balls[j]);
-                    balls[j]->collide(*balls[i]);
+                    balls[i]->collide(balls[j]);
+                    balls[j]->collide(balls[i]);
                 }
             }
     

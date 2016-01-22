@@ -16,46 +16,49 @@
 
 #include <vector>
 
-using namespace std;
+
 class animator : public gameobject
 {
 public:
     animator(char * bitmapName,char * spritesheetName)
     {
-        b = al_load_bitmap(bitmapName);
-        animationFrame = 0;
-        nextAnimation = 0;
-        currentAnimation = 0;
-        resetCount = 0;
-        parse(spritesheetName);
-    
+        init(bitmapName,spritesheetName);
     
     };
-    animator() {};
+    animator() {
+    std::cout << "\nSHOULD NOT BE CALLED\n";
+        
+    };
     ~animator()
     {
         al_destroy_bitmap(b);
     };
+    void init(char * bmpName, char * ssName);
     void parse(char * ssName);
     void switchAnimations(int animationNumber);
     void update();
     
     void draw(int lx, int ly);
     
+    void stop(int aniNum, int aniFrame);
+    void stop();
+    void start();
     
-private:
-    ALLEGRO_BITMAP *b;
+    
     int animationFrame;
     int nextAnimation;
-    
-    vector<int> speed;
-    vector<int> numFrames;
-    vector<int> x;
-    vector<int> y;
+    int isPlaying;
+    std::vector<int> speed;
+    std::vector<int> numFrames;
+    std::vector<int> x;
+    std::vector<int> y;
     
     int currentAnimation;
     int numAnimations;
     int height;
     int width;
     int resetCount;
+private:
+    ALLEGRO_BITMAP *b;
+    
 };

@@ -8,8 +8,8 @@
 
 #include "treeko.hpp"
 
-using namespace std;
-void treeko::collide(gameobject go)
+
+void treeko::collide(gameobject *go)
 {
 }
 

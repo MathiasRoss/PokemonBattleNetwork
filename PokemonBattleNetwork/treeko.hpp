@@ -23,10 +23,10 @@
 class treeko : public pokemon
 {
 public:
-    treeko(string n, float iY, int iSize, float iDX, float iDY)
+    treeko(std::string n, float iY, int iSize, float iDX, float iDY)
     {
         name = n;
-        cout << n;
+        //std::cout << n;
         n+=".txt";
         char * tem = (char *)n.c_str();
         parse(tem);
@@ -38,7 +38,7 @@ public:
         al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void init();
     void draw();

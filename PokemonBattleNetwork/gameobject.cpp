@@ -7,10 +7,10 @@
 //
 
 #include "gameobject.hpp"
-using namespace std;
-void gameobject::collide(gameobject go)
+
+void gameobject::collide(gameobject *go)
 {
- //   cout << "oops";
+ //   std::cout << "oops";
 }
 
 void gameobject::update()

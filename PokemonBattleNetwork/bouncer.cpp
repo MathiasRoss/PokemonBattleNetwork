@@ -7,17 +7,17 @@
 //
 
 #include "bouncer.hpp"
-using namespace std;
-void bouncer::collide(gameobject go)
+
+void bouncer::collide(gameobject *go)
 {
 
-//cout << typeid(go).name();
+//std::cout << typeid(go).name();
     resetCount = 120;
 
 
     al_set_target_bitmap(b);
     al_clear_to_color(al_map_rgb(25, 100, 255));
-    if (go.getID() == 1)
+    if (go->getID() == 1)
         markForDeath = true;
 }
 
@@ -43,7 +43,7 @@ void bouncer::update()
     }
     x+=dx;
     y+=dy;
-  //  cout << this->y;
+  // std::swag << this->y;
     
    
 }

@@ -26,11 +26,11 @@
 #include <typeinfo>
 #include "animator.hpp"
 #include "pokemon.hpp"
-using namespace std;
+
 class move : public gameobject
 {
 public:
-    move(string n, float iY, int iSize, float iDX, float iDY)
+    move(std::string n, float iY, int iSize, float iDX, float iDY)
     {
     };
     move()
@@ -39,27 +39,28 @@ public:
     };
     ~move()
     {
-        al_destroy_bitmap(b);
+        if (b!=NULL)
+            al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
-    virtual void update();
-    void init(string n,pokemon * own, pokemon *op, int orient);
-    virtual void draw();
+    void collide(gameobject *go);
+//virtual void update();
+    void start(std::string n,pokemon * own, pokemon *op, int orient,float newX, float newY);
+  //  virtual void draw();
     
     void parse(char * filename);
+     bool isDead;
 protected:
-    bool isDead;
+   
     int orientation;
     pokemon *owner;
     pokemon *opponent;
     animator anim;
-    string name;
+    std::string name;
     int id;
-    int evolveat;
-    string evolveto;
-    int hp,speed;
+    int damage;
     int debuffs;
+    int debuffDuration;
 private:
     
     int dx;

@@ -39,7 +39,7 @@ public:
         al_destroy_bitmap(b);
     };
     
-    void collide(gameobject go);
+    void collide(gameobject *go);
     void update();
     void init();
     void draw();
