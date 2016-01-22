@@ -1,12 +1,17 @@
-/* megaman_hpp */
 //
-//  megaman.hpp
+//  swag.hpp
 //  AllegroGame
 //
 //  Created by Sasha Han on 1/20/16.
 //
 //
 
+#ifndef swag_hpp
+#define swag_hpp
+
+#include <stdio.h>
+
+#endif /* swag_hpp */
 #pragma once
 #include <iostream>
 #include "allegro5/allegro.h"
@@ -19,27 +24,46 @@
 #include "globals.h"
 #include "gameobject.hpp"
 #include <typeinfo>
+#include "animator.hpp"
 #include "pokemon.hpp"
-class megaman : public pokemon
+using namespace std;
+class swag : public gameobject
 {
 public:
-    megaman(string n, float iY, int iSize, float iDX, float iDY)
+    swag(string n, pokemon * own, pokemon *op, int orient)
     {
-        name = n;
-        cout << "MEGAMAN";
+        init(n,own,op,orient);
     };
-    ~megaman()
+    swag()
+    {
+        isDead = false;
+    };
+    ~swag()
     {
         al_destroy_bitmap(b);
     };
     
     void collide(gameobject go);
     void update();
-    void init();
     void draw();
     
-    
+    void parse(char * filename);
+protected:
+    bool isDead;
+    int orientation;
+    pokemon *owner;
+    pokemon *opponent;
+    animator anim;
+    string name;
+    int id;
+    vector<string> swags;
+    vector<int> swaglevel;
+    int evolveat;
+    string evolveto;
+    int hp,speed;
+    int debuffs;
 private:
+    
     int dx;
     int dy;
     ALLEGRO_BITMAP *b;

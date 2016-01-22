@@ -1,31 +1,38 @@
 //
-//  pokemon.cpp
+//  move.cpp
 //  AllegroGame
 //
 //  Created by Sasha Han on 1/20/16.
 //
 //
 
-#include "pokemon.hpp"
+#include "move.hpp"
 
 using namespace std;
-void pokemon::collide(gameobject go)
+void move::collide(gameobject go)
 {
 }
-
-void pokemon::update()
+/*
+void move::update()
 {
-    anim.update();
+ //   anim.update();
 }
-void pokemon::draw()
+void move::draw()
 {
     anim.draw(x,y);
-}
-void pokemon::init()
+}*/
+void move::init(string n,pokemon * own, pokemon *op, int orient)
 {
-    
+    name = n;
+    owner = own;
+    opponent = op;
+    orientation = orient;
+    string temSS = n+"ss";
+    char * ssImg = (char *)(temSS + ".png").c_str();
+    char * ssDesc = (char *)(temSS + ".txt").c_str();
+    anim = *new animator(ssImg,ssDesc);
 }
-void pokemon::parse(char * filename)
+void move::parse(char * filename)
 {
     int doesEvolve,numMoves;
     cout << "hi";
@@ -43,7 +50,7 @@ void pokemon::parse(char * filename)
     cout << name << numMoves << doesEvolve;
     for (int i = 0; i < numMoves; i++)
     {
-    
+        
         getline(myfile, file_line);
         istringstream is( file_line );
         
@@ -67,6 +74,6 @@ void pokemon::parse(char * filename)
         evolveto = "";
         evolveat = 101;
     }
-          //current line of text is in file_line, not including the \n
+    //current line of text is in file_line, not including the \n
     myfile.close();
 }

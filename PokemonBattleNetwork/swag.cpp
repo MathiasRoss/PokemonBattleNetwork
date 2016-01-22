@@ -1,33 +1,30 @@
 //
-//  pokemon.cpp
+//  swag.cpp
 //  AllegroGame
 //
 //  Created by Sasha Han on 1/20/16.
 //
 //
 
-#include "pokemon.hpp"
+#include "swag.hpp"
 
 using namespace std;
-void pokemon::collide(gameobject go)
+void swag::collide(gameobject go)
 {
 }
 
-void pokemon::update()
+void swag::update()
 {
     anim.update();
 }
-void pokemon::draw()
+void swag::draw()
 {
     anim.draw(x,y);
 }
-void pokemon::init()
+
+void swag::parse(char * filename)
 {
-    
-}
-void pokemon::parse(char * filename)
-{
-    int doesEvolve,numMoves;
+    int doesEvolve,numswags;
     cout << "hi";
     ifstream myfile;
     
@@ -37,22 +34,22 @@ void pokemon::parse(char * filename)
     stringstream fl(file_line);
     fl >> name;
     fl >> id;
-    fl >> numMoves;
+    fl >> numswags;
     fl >> doesEvolve;
     cout << "\n";
-    cout << name << numMoves << doesEvolve;
-    for (int i = 0; i < numMoves; i++)
+    cout << name << numswags << doesEvolve;
+    for (int i = 0; i < numswags; i++)
     {
-    
+        
         getline(myfile, file_line);
         istringstream is( file_line );
         
         string j;
         is >> j;
-        moves.push_back(j);
+        swags.push_back(j);
         int k;
         is >> k;
-        movelevel.push_back(k);
+        swaglevel.push_back(k);
         cout << "\n" << j;
     }
     if (doesEvolve)
@@ -67,6 +64,6 @@ void pokemon::parse(char * filename)
         evolveto = "";
         evolveat = 101;
     }
-          //current line of text is in file_line, not including the \n
+    //current line of text is in file_line, not including the \n
     myfile.close();
 }

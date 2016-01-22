@@ -20,8 +20,6 @@ int main(int argc, char **argv){
     bool redraw = true;
     bool doexit = false;
     bool key[4] = { false, false, false, false };
-    PokemonFactory pf;
-    pokemon * p = pf.Create(TREEKO, 1, 2, 3, 4, 5);
     if(!al_init()) {
         fprintf(stderr, "failed to initialize allegro!\n");
         return -1;
@@ -67,6 +65,8 @@ int main(int argc, char **argv){
     }
     animator *anim = new animator("megamanss.png","megamanss.txt");
     //ballGenerator *bg = new ballGenerator(100,100,&collide,&balls);
+    PokemonFactory pf;
+    pokemon * p = new pokemon("treeko",1,2,3,4);
     
  //    bouncer b(20,20,32,3,4);
  //   bouncer c(30,30,32,4,4);
@@ -148,6 +148,7 @@ int main(int argc, char **argv){
            // for (int i = 0; i < tiles.size(); i++)
              //   tiles[i]->update();
             collide.update();
+            p->update();
             //bg->update();
             redraw = true;
         }
@@ -210,7 +211,8 @@ int main(int argc, char **argv){
                 tiles[i]->draw();
             for (int i = 0; i < balls.size(); i++)
                 balls[i]->draw();*/
-            anim->draw();
+            anim->draw(100,100);
+            p->draw();
             al_flip_display();
         }
     }

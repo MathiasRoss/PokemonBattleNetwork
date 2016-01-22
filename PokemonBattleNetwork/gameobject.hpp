@@ -28,8 +28,8 @@ class gameobject
 public:
     gameobject()
     {
-        this->x = 0;
-        this->y = 1;
+        this->x = 200;
+        this->y = 200;
         this->size = 100;
         this->id = 0;
         markForDeath = false;

@@ -31,6 +31,7 @@ public:
     
     
     };
+    animator() {};
     ~animator()
     {
         al_destroy_bitmap(b);
@@ -39,7 +40,7 @@ public:
     void switchAnimations(int animationNumber);
     void update();
     
-    void draw();
+    void draw(int lx, int ly);
     
     
 private:

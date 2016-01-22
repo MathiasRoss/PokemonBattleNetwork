@@ -51,9 +51,9 @@ void animator::switchAnimations(int animationNumber)
         nextAnimation = animationNumber;
     }
 }
-void animator::draw()
+void animator::draw(int lx, int ly)
 {
-    al_draw_bitmap_region(b, x[currentAnimation]+(width+10)*animationFrame, y[currentAnimation], width, height, 100, 100, 0);
+    al_draw_bitmap_region(b, x[currentAnimation]+(width+10)*animationFrame, y[currentAnimation], width, height, lx, ly, 0);
 //    al_draw_bitmap(b, x, y, 0);
 }
 void animator::parse(char * ssName)
@@ -87,4 +87,6 @@ void animator::parse(char * ssName)
         //current line of text is in file_line, not including the \n
     }
     resetCount = speed[0];
+    myfile.close();
+    
 }

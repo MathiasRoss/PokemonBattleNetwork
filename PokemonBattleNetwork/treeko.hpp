@@ -23,9 +23,14 @@
 class treeko : public pokemon
 {
 public:
-    treeko(float iX, float iY, int iSize, float iDX, float iDY)
+    treeko(string n, float iY, int iSize, float iDX, float iDY)
     {
-        cout << "TREEKO";
+        name = n;
+        cout << n;
+        n+=".txt";
+        char * tem = (char *)n.c_str();
+        parse(tem);
+        anim = *new animator("treekoss.png","treekoss.txt");
     };
   
     ~treeko()

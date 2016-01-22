@@ -43,7 +43,7 @@ enum pokeIDS { NONE,TREEKO,MEGAMAN };
 class PokemonFactory
 {
 public:
-    pokemon *Create(pokeIDS pokeID, float a, float b, int c, float d, float e)
+    pokemon *Create(pokeIDS pokeID, string a, float b, int c, float d, float e)
     {
         if (pokeID == TREEKO)
             return new treeko(a,b,c,d,e);

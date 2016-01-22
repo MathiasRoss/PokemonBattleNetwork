@@ -1,17 +1,17 @@
 //
-//  pokemon.hpp
+//  move.hpp
 //  AllegroGame
 //
 //  Created by Sasha Han on 1/20/16.
 //
 //
 
-#ifndef pokemon_hpp
-#define pokemon_hpp
+#ifndef move_hpp
+#define move_hpp
 
 #include <stdio.h>
 
-#endif /* pokemon_hpp */
+#endif /* move_hpp */
 #pragma once
 #include <iostream>
 #include "allegro5/allegro.h"
@@ -25,49 +25,43 @@
 #include "gameobject.hpp"
 #include <typeinfo>
 #include "animator.hpp"
+#include "pokemon.hpp"
 using namespace std;
-class pokemon : public gameobject
+class move : public gameobject
 {
 public:
-    pokemon(string n, float iY, int iSize, float iDX, float iDY)
+    move(string n, float iY, int iSize, float iDX, float iDY)
     {
-        name = n;
-        cout << n;
-        n+=".txt";
-        char * tem = (char *)n.c_str();
-        parse(tem);
-        string temSS = name+"ss";
-        char * ssImg = (char *)(temSS + ".png").c_str();
-        char * ssDesc = (char *)(temSS + ".txt").c_str();
-        anim = *new animator(ssImg,ssDesc);
     };
-    pokemon()
+    move()
     {
-        cout << "ERROR2";
+        isDead = false;
     };
-    ~pokemon()
+    ~move()
     {
         al_destroy_bitmap(b);
     };
     
     void collide(gameobject go);
-    void update();
-    void init();
-    void draw();
+    virtual void update();
+    void init(string n,pokemon * own, pokemon *op, int orient);
+    virtual void draw();
     
     void parse(char * filename);
 protected:
+    bool isDead;
+    int orientation;
+    pokemon *owner;
+    pokemon *opponent;
     animator anim;
     string name;
     int id;
-    vector<string> moves;
-    vector<int> movelevel;
     int evolveat;
     string evolveto;
     int hp,speed;
     int debuffs;
 private:
-
+    
     int dx;
     int dy;
     ALLEGRO_BITMAP *b;
