@@ -39,8 +39,6 @@ public:
     };
     ~move()
     {
-        if (b!=NULL)
-            al_destroy_bitmap(b);
     };
     
     void collide(gameobject *go);

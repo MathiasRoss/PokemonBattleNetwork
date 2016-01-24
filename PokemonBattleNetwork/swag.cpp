@@ -13,6 +13,7 @@ void swag::collide(gameobject *go)
 {
     if (go == opponent)
     {
+        std::cout<< "swag hit";
         opponent->hp-=10;
         markForDeath = true;
         opponent->anim.stop();

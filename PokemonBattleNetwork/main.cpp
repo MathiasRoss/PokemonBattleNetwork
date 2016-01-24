@@ -38,7 +38,7 @@ int main(int argc, char **argv){
     collider collide;
     std::vector<bouncer *> balls;
     std::vector<tile*> tiles;
-
+    std::vector<move *> moveVector;
     ALLEGRO_BITMAP *image;
     image = al_load_bitmap("megamanss.png");
     
@@ -71,6 +71,7 @@ int main(int argc, char **argv){
     pokemon * p = new pokemon("treeko",1,2,3,4);
     MoveFactory *mf;
     move *m = mf->Create(SWAG, "swag", p, p, 0, 400, 200);
+    moveVector.push_back(m);
     collide.add(p);
     collide.add(m);
     //    bouncer b(20,20,32,3,4);
@@ -123,15 +124,33 @@ int main(int argc, char **argv){
         if(ev.type == ALLEGRO_EVENT_TIMER) {
             collide.update();
             anim->update();
-            
+            for (int i = 0; i < moveVector.size(); i++)
+            {
+                std::cout << "moveVector.size()" << moveVector.size() << "\n";
+                if (moveVector[i]->markForDeath == true)
+                {
+                    
+                    delete moveVector[i];
+                    moveVector.erase(moveVector.begin()+i);
+                    i--;
+                    
+                }
+                else
+                {
+                    moveVector[i]->update();
+                }
+            }
+            /*
             if (m != NULL && m->markForDeath == true)
             {
+                std::cout << "deleting object";
                 delete m;
                 m = NULL;
             }
             else if (m!= NULL)
                 
                 m->update();
+             */
             for (int i = 0; i < balls.size(); i++)
             {
                 if (balls[i]->markForDeath == true)
@@ -223,9 +242,9 @@ int main(int argc, char **argv){
             al_set_target_bitmap(al_get_backbuffer(display));
             al_clear_to_color(al_map_rgb(0,0,0));
            // al_draw_bitmap(image,200,200,0);
-            if (m)
-                m->draw();
             
+            for (int i = 0; i < moveVector.size(); i++)
+                moveVector[i]->draw();
             /*
             for (int i = 0; i < tiles.size(); i++)
                 tiles[i]->draw();
