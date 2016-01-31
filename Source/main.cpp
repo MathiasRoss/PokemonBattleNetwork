@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <allegro5/allegro.h>
-#include "allegro5/allegro_image.h"
+#include "allegro5/allegro.h"
 #include "bouncer.hpp"
 #include "collider.hpp"
 #include "globals.h"
@@ -8,7 +7,7 @@
 #include "ballGenerator.hpp"
 #include <vector>
 #include "animator.hpp"
-#include <allegro5/allegro_native_dialog.h>
+#include "allegro5/allegro_native_dialog.h"
 #include "Factory.hpp"
 
 enum MYKEYS {
@@ -35,12 +34,12 @@ int main(int argc, char **argv){
         fprintf(stderr, "failed to initialize the keyboard!\n");
         return -1;
     }
-  
+    
     collider collide;
     std::vector<bouncer *> balls;
     std::vector<tile*> tiles;
-    std::vector<move*> moveVector;
-    ALLEGRO_BITMAP *image = NULL;
+    std::vector<move *> moveVector;
+    ALLEGRO_BITMAP *image;
     image = al_load_bitmap("megamanss.png");
     
     if(!image) {
@@ -68,10 +67,15 @@ int main(int argc, char **argv){
     animator *anim = new animator("megamanss.png","megamanss.txt");
     //ballGenerator *bg = new ballGenerator(100,100,&collide,&balls);
     //PokemonFactory pf;
-	/*
+	al_show_native_message_box(display, "Error", "Error", "About to Load Treeko",
+                                   NULL, NULL);
+
     pokemon * p = new pokemon("treeko",1,2,3,4);
+    al_show_native_message_box(display, "Error", "Error", "Loaded Treeko",
+                                   NULL, NULL);
     MoveFactory *mf;
     move *m = mf->Create(SWAG, "swag", p, p, 0, 400, 200);
+	fprintf(stderr, "Created Swag");
     moveVector.push_back(m);
     collide.add(p);
     collide.add(m);
@@ -82,7 +86,8 @@ int main(int argc, char **argv){
         fprintf(stderr, "failed to create timer!\n");
         return -1;
     }
-    
+    al_show_native_message_box(display, "Error", "Error", "About to Make Display",
+                                   NULL, NULL);
     display = al_create_display(SCREEN_W, SCREEN_H);
     if(!display) {
         fprintf(stderr, "failed to create display!\n");
@@ -115,7 +120,8 @@ int main(int argc, char **argv){
     al_start_timer(timer);
     
     
-    
+    al_show_native_message_box(display, "Error", "Error", "About to start game loop!",
+                                   NULL, NULL);
     std::cout << "\nDONE WITH INIT\n";
     while(!doexit)
     {
@@ -152,7 +158,7 @@ int main(int argc, char **argv){
                 
                 m->update();
              */
-          /*  for (int i = 0; i < balls.size(); i++)
+            for (int i = 0; i < balls.size(); i++)
             {
                 if (balls[i]->markForDeath == true)
                 {
@@ -251,17 +257,17 @@ int main(int argc, char **argv){
                 tiles[i]->draw();
             for (int i = 0; i < balls.size(); i++)
                 balls[i]->draw();*/
-            /*anim->draw(100,100);
+            anim->draw(100,100);
             p->draw();
             al_flip_display();
-        }*/
-//    }
- /*   for (int i = 0; i < tiles.size(); i++)
+        }
+    }
+    for (int i = 0; i < tiles.size(); i++)
         delete tiles[i];
     for (int i = 0; i < balls.size(); i++)
         delete balls[i];
     
-   */ 
+    
     al_destroy_timer(timer);
     al_destroy_display(display);
     al_destroy_event_queue(event_queue);

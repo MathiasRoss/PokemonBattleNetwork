@@ -31,15 +31,18 @@ class pokemon : public gameobject
 public:
     pokemon(std::string n, float iY, int iSize, float iDX, float iDY)
     {
+		std::cout << "Started pokemon creation\n";
         name = n;
     //  std::cout << n;
         n+=".txt";
         char * tem = (char *)n.c_str();
         parse(tem);
+		std::cout << "parsed\n";
         std::string temSS = name+"ss";
         char * ssImg = (char *)(temSS + ".png").c_str();
         char * ssDesc = (char *)(temSS + ".txt").c_str();
         anim = *new animator(ssImg,ssDesc);
+		std::cout << "animator loaded";
         hp = 100;
     };
     pokemon()
