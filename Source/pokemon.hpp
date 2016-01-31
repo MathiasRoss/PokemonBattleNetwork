@@ -39,9 +39,19 @@ public:
         parse(tem);
 		std::cout << "parsed\n";
         std::string temSS = name+"ss";
-        char * ssImg = (char *)(temSS + ".png").c_str();
-        char * ssDesc = (char *)(temSS + ".txt").c_str();
+
+		std::string temSStxt = temSS + ".txt";
+		std::string temSSpng = temSS + ".png";
+
+        char * ssImg = (char *)temSSpng.c_str();
+        char * ssDesc = (char *)temSStxt.c_str();
+		std::cout << ssDesc << "\n";
+
+
+
+
         anim = *new animator(ssImg,ssDesc);
+		//anim = *new animator(ssImg,"treekoss.txt");
 		std::cout << "animator loaded";
         hp = 100;
     };

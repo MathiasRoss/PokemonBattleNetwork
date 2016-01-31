@@ -73,8 +73,10 @@ int main(int argc, char **argv){
     pokemon * p = new pokemon("treeko",1,2,3,4);
     al_show_native_message_box(display, "Error", "Error", "Loaded Treeko",
                                    NULL, NULL);
-    MoveFactory *mf;
+    MoveFactory *mf = new MoveFactory;
+	std::cout << "movefactory declared \n";
     move *m = mf->Create(SWAG, "swag", p, p, 0, 400, 200);
+	std::cout << "something Swag something \n";
 	fprintf(stderr, "Created Swag");
     moveVector.push_back(m);
     collide.add(p);
