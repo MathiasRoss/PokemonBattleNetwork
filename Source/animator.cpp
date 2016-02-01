@@ -10,16 +10,12 @@
 
 void animator::init(char * bmpName, char * ssName)
 {
-	std::cout << "Animator called, trying to load: " << bmpName << ", "<< ssName << "\n";
     b = al_load_bitmap(bmpName);
-	std::cout << "bitmap loaded \n";
     animationFrame = 0;
     nextAnimation = 0;
     currentAnimation = 0;
     resetCount = 0;
-	std::cout << "animator about to load parse\n";
     parse(ssName);
-	std::cout << "animator parsed \n";
     start();
 }
 void animator::update()

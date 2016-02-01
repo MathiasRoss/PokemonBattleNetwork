@@ -27,14 +27,16 @@ void move::start(std::string n,pokemon * own, pokemon *op, int orient, float new
     owner = own;
     opponent = op;
     orientation = orient;
-    std::string temSS = n;
 
-	std::string temSStxt = temSS + "ss.txt";
-	std::string temSSpng = temSS + ".png";
 
-    char * ssImg = (char *)temSSpng.c_str();
-    char * ssDesc = (char *)temSStxt.c_str();
+	std::string temSS = n;
+	std::string temS = temSS + ".png";
+	std::string temD = "Source/" + temSS + "ss.txt";
+	char * ssImg = (char *)temS.c_str();
+	char * ssDesc = (char *)temD.c_str();
 
+
+    
    // std::cout<< ssImg << "\t" << ssDesc << "\n";
     
    // anim = *new animator(ssImg,ssDesc);
