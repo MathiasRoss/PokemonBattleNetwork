@@ -67,17 +67,10 @@ int main(int argc, char **argv){
     animator *anim = new animator("megamanss.png","megamanss.txt");
     //ballGenerator *bg = new ballGenerator(100,100,&collide,&balls);
     //PokemonFactory pf;
-	al_show_native_message_box(display, "Error", "Error", "About to Load Treeko",
-                                   NULL, NULL);
 
     pokemon * p = new pokemon("treeko",1,2,3,4);
-    al_show_native_message_box(display, "Error", "Error", "Loaded Treeko",
-                                   NULL, NULL);
-    MoveFactory *mf = new MoveFactory;
-	std::cout << "movefactory declared \n";
+    MoveFactory *mf;
     move *m = mf->Create(SWAG, "swag", p, p, 0, 400, 200);
-	std::cout << "something Swag something \n";
-	fprintf(stderr, "Created Swag");
     moveVector.push_back(m);
     collide.add(p);
     collide.add(m);
@@ -88,8 +81,7 @@ int main(int argc, char **argv){
         fprintf(stderr, "failed to create timer!\n");
         return -1;
     }
-    al_show_native_message_box(display, "Error", "Error", "About to Make Display",
-                                   NULL, NULL);
+    
     display = al_create_display(SCREEN_W, SCREEN_H);
     if(!display) {
         fprintf(stderr, "failed to create display!\n");
@@ -122,8 +114,7 @@ int main(int argc, char **argv){
     al_start_timer(timer);
     
     
-    al_show_native_message_box(display, "Error", "Error", "About to start game loop!",
-                                   NULL, NULL);
+    
     std::cout << "\nDONE WITH INIT\n";
     while(!doexit)
     {
